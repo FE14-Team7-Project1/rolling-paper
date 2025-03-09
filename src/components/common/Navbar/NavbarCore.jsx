@@ -53,6 +53,10 @@ const MakingRollingPaper = () => {
 export default function Navbar() {
     const Navbar = styled.div`
         border-bottom: 1px #EDEDED;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 0;
     `;
     return (
         <Navbar>
