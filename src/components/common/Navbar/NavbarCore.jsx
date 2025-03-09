@@ -37,17 +37,18 @@ const RollingHeader = () => {
     );
 };
 
-// const MakingRollingPaper = () => {
-//     // 다른 페이지에서는 안 보이게 만들기
-//     const navigate = useNavigate();
-//     const handleMakingClick = () => navigate('rolling-paper/src/pages/RollingPaper/RollingPaper.page.jsx');
+const MakingRollingPaper = () => {
+    // 다른 페이지에서는 안 보이게 만들기
+    const navigate = useNavigate();
+    const handleMakingClick = () => navigate('list');
     
-//     return (
-//         <div onClick={handleMakingClick}>
-//             <Button type='outlined' w='122' h='40'>롤링 페이퍼 만들기</Button> 
-//         </div>
-//     )
-// }
+    return (
+        <div onClick={handleMakingClick}>
+            {/* <Button type='outlined' w='122' h='40'>롤링 페이퍼 만들기</Button>  */}
+            <button>롤링페이퍼 만들기</button>
+        </div>
+    )
+}
 
 export default function Navbar() {
     const Navbar = styled.div`
@@ -56,7 +57,7 @@ export default function Navbar() {
     return (
         <Navbar>
             <RollingHeader />
-            {/* <MakingRollingPaper /> */}
+            <MakingRollingPaper />
         </Navbar>
     )
 }
