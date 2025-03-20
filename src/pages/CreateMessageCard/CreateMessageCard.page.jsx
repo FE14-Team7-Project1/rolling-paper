@@ -152,6 +152,7 @@ export default function CreateMessageCard() {
             <TextEditor
               value={messageCardFormData.content}
               onChange={handleEditorChange}
+              font={messageCardFormData.font}
             />
           </S.ContentWrapper>
           <S.ContentWrapper>

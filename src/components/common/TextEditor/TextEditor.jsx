@@ -36,7 +36,7 @@ const toolbarOptions = [
   [{ color: [] }],
 ];
 
-export default function TextEditor({ onChange }) {
+export default function TextEditor({ onChange, font }) {
   // 에디터에서 관리하는 텍스트를 React 상태로 가지고 있음
   const [value, setValue] = useState('');
   console.log(value);
@@ -70,6 +70,13 @@ export default function TextEditor({ onChange }) {
       quillInstance.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    if (quillInstance.current?.root) {
+      console.log(font);
+      quillInstance.current.root.style.fontFamily = font;
+    }
+  }, [font]);
 
   return (
     <EditorContainer>
